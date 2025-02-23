@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h2 class="title">Danh sách các Môn học</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên môn học</th>
+                <th>Loại môn học</th>
+                <th>Học kỳ</th>
+                <th>Khoa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% subjects.forEach((subject)=> { %>
+                <tr>
+                    <td>
+                        <%= subject.id %>
+                    </td>
+                    <td>
+                        <%= subject.name %>
+                    </td>
+                    <td>
+                        <%= subject.type %>
+                    </td>
+                    <td>
+                        <%= subject.semester %>
+                    </td>
+                    <td>
+                        <%= subject.faculty %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</body>
+
+</html>
